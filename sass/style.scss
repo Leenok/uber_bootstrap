@@ -165,6 +165,7 @@ nav {
 	}
 }
 .label {
+	position: relative;
 	margin: 0 auto;
 	height: 24px;
 	width: 112px;
@@ -175,8 +176,14 @@ nav {
 	font-weight: 300;
 	text-transform: uppercase;
 	text-align: center;
+	z-index: 2;
+	&_white{
+		background: #fff;
+		color: #000;
+	}
 }
 .title {
+	position: relative;
 	margin-bottom: 0;
 	margin-top: 38px;
 	color: $color_3;
@@ -184,14 +191,23 @@ nav {
 	font-weight: 700;
 	text-transform: uppercase;
 	text-align: center;
+	z-index: 2;
+	&_white{
+		color:#fff;
+	}
 }
 
 .subtitle{
+	position: relative;
 	margin-top: 19px;
 	font-size: 17px;
 	font-weight: 400;
 	color: $color_3;
 	text-align: center;
+	z-index: 2;
+	&_white{
+		color:#fff;
+	}
 }
 .mobile{
 	min-height: 854px;
@@ -252,46 +268,195 @@ nav {
 	}
 }
 
-.car{
-	height: 502px;
-	background-color: $background-color_2;
-	color: $color_1;
+.choice{
 	position: relative;
-	.container{
-		padding-top: 60px;
-	}
-	.label {
-		background: $color_1;
-		color: #000000;
-
-	}
-	.title{
-		margin-top: 25px;
-		color: $color_1;
-	}
-	.subtitle{
-		color: $color_1;
-		margin-top: 0;
+	min-height: 895px;
+	padding: 57px 0 138px 0;
+	background: url('../img/mobile_bg.png') center (center / cover) no-repeat;
+	color: $color_1;
+	.black {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 499px;
+		width: 100%;
+		background-color: #070716;
+		z-index: 1;
 	}
 	img{
-		position: absolute;
-		top: 234px;
-		left: 50%;
-		transform: translateX(-50%);
+		position: relative;
+		display: block;
+		margin: 56px auto 0 auto;
+		z-index: 2;
 	}
-
-}
-.car_2{
-	background: url('../img/bg_car.png') center center/ cover no-repeat;
-	height: 398px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	&_text{
-		width: 327px;
 		text-align: center;
+		color: #222222;
 		font-size: 17px;
 		font-weight: 300;
 		line-height: 24px;
+	}
+}
+
+.require{
+	padding: 68px 0 84px 0;
+	&_block{
+		margin: 33px 0;
+		&_nmb{
+			margin-bottom: 0;
+		}
+	}
+	&_title{
+		color: #1ca8c3;
+		font-size: 22px;
+		font-weight: 400;
+	}
+	&_list{
+		list-style-type: none;
+		padding-left: 50px;
+		margin-top: 22px;
+		li{
+			position: relative;
+			font-size: 17px;
+			font-weight: 300;
+			line-height: 24px;
+			margin-bottom: 10px;
+			&::before{
+				content: '';
+				display: block;
+				position: absolute;
+				left: -32px;
+				top: 3px;
+				width: 21px;
+				height: 20px;
+				background: url('../icons/check.svg') center (center / cover) no-repeat;
+			}
+		}
+	}
+	.warning{
+		.require_title{
+			color: #c46666;
+		}
+		.require_list{
+			li{
+				&::before{
+					background: url('../icons/check_red.svg') center (center / cover) no-repeat;
+				}
+			}
+		}
+	}
+}
+
+.world{
+	position: relative;
+	min-height: 720px;
+	background: url('../img/world_bg.jpg') center (center / cover) no-repeat;
+	padding-top: 48px;
+	.title_white{
+		margin-top: 20px;
+	}
+	.subtitle_white{
+		margin-top: 2px;
+		font-size: 17px;
+		line-height: 21px;
+	}
+	.all_city{
+		position: absolute;
+		bottom: 22px;
+		left: 50%;
+		transform: translateX(-50%);
+		cursor: pointer;
+		text-transform: uppercase;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 68px;
+		a{
+			text-decoration: none;
+			color:#1FBAD6;
+		}
+	}
+}
+footer{
+	padding: 14px 23px 39px 23px;
+	a{
+		text-decoration: none;
+	}
+}
+.footer{
+	&_divider{
+		width: 299px;
+		height: 4px;
+		background-color: #1ca8c3;
+		margin: 0 auto;
+	}
+	&_wrapper{
+		display: flex ;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding-top: 32px;
+	}
+	&_wrapper > div {
+		width: 33%;
+		&:nth-child(3){
+			display: flex ;
+			justify-content: flex-end;
+		}
+	}
+	&_social{
+		width: 160px;
+		display: flex;
+		justify-content: space-between;
+		&_item {
+			display: flex ;
+			justify-content: center;
+			align-items: center;
+			margin: 0 4px ;
+			width: 32px;
+			height: 32px;
+			background-color: #070716;
+			border-radius: 100%;
+			i {
+				color: #fff
+			}
+		}
+	}
+	&_links{
+		width: 399px;
+		margin: 0 auto;
+		&_main{
+			display: flex;
+			justify-content: space-between;
+			padding: 0 10px;
+			a{
+				font-size: 15px;
+				color: black;
+				font-weight: 300;
+				text-transform: uppercase;
+			}
+		}
+		&_second{
+			display: flex;
+			justify-content: space-between;
+			margin-top: 10px;
+			a{
+				font-size: 11px;
+				color: #999999;
+				font-weight: 300;
+				text-transform: uppercase;
+			}
+		}
+		.ru{
+			display: block;
+			margin: 0 auto;
+			color:#1FBAD6;
+			font-size: 11px;
+			font-weight: 400;
+			margin-top: 19px;
+			text-transform: uppercase;
+			text-align: center;
+		}
+	}
+	.market{
+
 	}
 }

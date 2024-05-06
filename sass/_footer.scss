@@ -97,6 +97,15 @@ footer{
 		}
 	}
 }
+@media (max-width:991px) {
+	.footer{
+		&_wrapper> div{
+			&:nth-child(2) {
+				width: 50%;
+			} 
+		}
+	}
+}
 @media (max-width:767px) {
 	.footer{
 		&_wrapper  > div {
@@ -141,6 +150,7 @@ footer{
 			flex-wrap: wrap;
 			&_main{
 				font-size: 14px;
+				white-space: nowrap;
 				a{
 					display: block;
 				}
@@ -161,6 +171,7 @@ footer{
 	}
 	.market{
 		flex-direction: row;
+		justify-content: center;
 		img{
 			height: 23px;
 		}

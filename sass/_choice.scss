@@ -30,8 +30,18 @@
 }
 @media (max-width:991px) {
 	.choice{
+		padding: 57px 0 70px 0;
 		img{
 			width: 100%;
+		}
+	}
+}
+@media (max-width:767px) {
+	.choice{
+		min-height: 425px;
+		padding: 20px 0 30px 0;
+		.black{
+			height: 329px;
 		}
 	}
 }
@@ -42,6 +52,7 @@
 		background: #000;
 		&_text{
 			display: flex;
+			justify-content: center;
 			margin: 0 auto;
 			color: #fff;
 			font-size: 17px;

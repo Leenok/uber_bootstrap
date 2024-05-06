@@ -1,0 +1,60 @@
+
+.choice{
+	position: relative;
+	min-height: 895px;
+	padding: 57px 0 138px 0;
+	background: url('../img/mobile_bg.png') center (center / cover) no-repeat;
+	color: $color_1;
+	.black {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 499px;
+		width: 100%;
+		background-color: #070716;
+		z-index: 1;
+	}
+	img{
+		position: relative;
+		display: block;
+		margin: 56px auto 0 auto;
+		z-index: 2;
+	}
+	&_text{
+		text-align: center;
+		color: #222222;
+		font-size: 17px;
+		font-weight: 300;
+		line-height: 24px;
+	}
+}
+@media (max-width:991px) {
+	.choice{
+		img{
+			width: 100%;
+		}
+	}
+}
+@media (max-width:575px) {
+	.choice{
+		min-height: 393px;
+		padding: 27px 0 31px 0;
+		background: #000;
+		&_text{
+			display: flex;
+			margin: 0 auto;
+			color: #fff;
+			font-size: 17px;
+			font-weight: 300;
+			line-height: 24px;
+			width: 90%;
+			margin-top: 23px;
+		}
+		.black{
+			display: none;
+		}
+		img{
+			margin: 34px auto 0 auto;
+		}
+	}
+}

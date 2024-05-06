@@ -1,0 +1,39 @@
+.world{
+	position: relative;
+	min-height: 720px;
+	background: url('../img/world_bg.jpg') center (center / cover) no-repeat;
+	padding-top: 48px;
+	.title_white{
+		margin-top: 20px;
+	}
+	.subtitle_white{
+		margin-top: 2px;
+		font-size: 17px;
+		line-height: 21px;
+	}
+	.all_city{
+		position: absolute;
+		bottom: 22px;
+		left: 50%;
+		transform: translateX(-50%);
+		cursor: pointer;
+		text-transform: uppercase;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 68px;
+		a{
+			text-decoration: none;
+			color:#1FBAD6;
+		}
+	}
+}
+@media (max-width:575px) {
+	.world{
+		min-height: 360px;
+		.all_city{
+			line-height: 16px;
+			width: 90%;
+			text-align: center;
+		}
+	}
+}
